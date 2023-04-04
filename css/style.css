@@ -20,6 +20,10 @@ body {
     justify-content: space-evenly;
 }
 
+.invisivel{
+    display: none;
+}
+
 .card {
     width: 117px;
     height: 146px;
@@ -49,10 +53,10 @@ body {
     transform: rotateY(180deg);
 } 
 
-.card:hover .back-face {
+.back-face.selected {
     transform: rotateY(0deg);
 }
 
-.card:hover .front-face {
+.front-face.selected {
     transform: rotateY(-180deg);
 }
