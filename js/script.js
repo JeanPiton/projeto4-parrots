@@ -1,5 +1,7 @@
 const Parrots = ["imagens/bobrossparrot.gif", "imagens/explodyparrot.gif", "imagens/fiestaparrot.gif", "imagens/metalparrot.gif", "imagens/revertitparrot.gif", "imagens/tripletsparrot.gif", "imagens/unicornparrot.gif"];
 const Cont = document.querySelector(".conteudo");
+const secs = document.querySelector(".segundos");
+let segundos = 0;
 let img = [];
 let nCartas = prompt("Insira o número de cartas: ");
 let jogadas = 0;
@@ -24,7 +26,11 @@ for (let i = 0; i < nCartas; i++) {
     let Cartas = document.querySelectorAll(".card");
     Cartas[i].querySelector(".back-face").querySelector("img").src = Parrots[img[i]];
 }
-
+function atualizaTimer(){
+    segundos++;
+    secs.innerHTML = segundos;
+}
+let timer = setInterval(atualizaTimer, 1000);
 function select(carta) {
     let qtdSelecionada = document.querySelectorAll(".back-face.selected");
     jogadas++;
@@ -51,8 +57,9 @@ function compara(qtdSelecionada) {
         setTimeout(desvira, 1000);
     }
     if(document.querySelectorAll(".completo").length == nCartas){
-        let msg = function(){alert(`Voce ganhou em ${jogadas} jogadas`);};
-        setTimeout(msg, 0);
+        let msg = function(){alert(`Voce ganhou em ${jogadas} jogadas! A duração do jogo foi de ${segundos} segundos!`);};
+        clearInterval(timer);
+        setTimeout(msg, 500);
     }
 }
 

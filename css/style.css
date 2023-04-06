@@ -14,14 +14,28 @@ body {
     padding: 40px;
 }
 
-.conteudo{
+.timer{
+    width: 100px;
+    height: 70px;
+    position:relative;
+    top:0;
+    right: 0;
     display:flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    position:fixed;
+    background-color: brown;
+    color:white;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 40px;
+    border-bottom-left-radius: 10px;
 }
 
-.invisivel{
-    display: none;
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -44,27 +58,46 @@ body {
     transition: all .5s;
     transform-style: preserve-3d;
 }
-.card img{
-    width:100px;
+
+.card img {
+    width: 100px;
     height: 100px;
 }
 
 .back-face {
     transform: rotateY(180deg);
-} 
+}
 
-.back-face.selected{
+.back-face.selected {
     transform: rotateY(0deg);
 }
 
-.front-face.selected{
+.front-face.selected {
     transform: rotateY(-180deg);
 }
 
-.back-face.completo{
+.back-face.completo {
     transform: rotateY(0deg);
 }
 
-.front-face.completo{
+.front-face.completo {
     transform: rotateY(-180deg);
+}
+
+
+@media only screen and (max-width:335px) {
+    .timer{
+        width:70px;
+        height: 55px;
+        font-size: 30px;
+    }
+
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card{
+        margin: 17px 0;
+    }
 }
