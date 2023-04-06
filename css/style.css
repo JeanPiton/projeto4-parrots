@@ -53,10 +53,18 @@ body {
     transform: rotateY(180deg);
 } 
 
-.back-face.selected {
+.back-face.selected{
     transform: rotateY(0deg);
 }
 
-.front-face.selected {
+.front-face.selected{
+    transform: rotateY(-180deg);
+}
+
+.back-face.completo{
+    transform: rotateY(0deg);
+}
+
+.front-face.completo{
     transform: rotateY(-180deg);
 }
