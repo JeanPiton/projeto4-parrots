@@ -22,6 +22,7 @@ function jogo() {
     }
     Parrots.sort(comparador);
     img.sort(comparador);
+    //console.log(img);
     for (let i = 0; i < nCartas; i++) {
         Cont.innerHTML += `<div class="card" onclick="select(this)" data-test="card">
     <div class="front-face face">
@@ -58,7 +59,7 @@ function select(carta) {
 
 function compara(qtdSelecionada) {
     if (qtdSelecionada[0].querySelector("img").src === qtdSelecionada[1].querySelector("img").src) {
-        console.log(true);
+        //console.log(true);
         qtdSelecionada[0].classList.remove("selected");
         qtdSelecionada[0].classList.add("completo");
         qtdSelecionada[1].classList.remove("selected");
@@ -88,7 +89,7 @@ function comparador() {
 
 function reiniciar(){
     do{
-        novoJogo = prompt("Quer jogar novemente?");
+        novoJogo = prompt("Você gostaria de reiniciar a partida? (sim ou não)");
     }while(novoJogo !== "sim" && novoJogo !== "não");
     if(novoJogo === "sim"){
         segundos = 0;
