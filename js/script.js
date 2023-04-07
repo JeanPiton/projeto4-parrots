@@ -68,8 +68,8 @@ function compara(qtdSelecionada) {
         setTimeout(desvira, 1000);
     }
     if (document.querySelectorAll(".completo").length == nCartas) {
-        let msg = function () { alert(`Voce ganhou em ${jogadas} jogadas! A duração do jogo foi de ${segundos} segundos!`); };
         clearInterval(timer);
+        let msg = function () { alert(`Voce ganhou em ${jogadas} jogadas! A duração do jogo foi de ${segundos} segundos!`); };
         setTimeout(msg, 500);
         setTimeout(reiniciar, 500);
     }
