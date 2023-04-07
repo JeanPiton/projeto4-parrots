@@ -13,7 +13,7 @@ jogo();
 
 function jogo() {
     Cont.innerHTML = '';
-    while (nCartas <= 0 || nCartas >= 15 || nCartas % 2) {
+    while (nCartas <= 3 || nCartas >= 15 || nCartas % 2) {
         nCartas = prompt("Insira o número de cartas: ");
     }
     for (let c = 0; c < nCartas / 2; c++) {

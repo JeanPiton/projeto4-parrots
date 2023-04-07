@@ -24,8 +24,8 @@ body {
     align-items: center;
     justify-content: center;
     position:fixed;
-    background-color: brown;
-    color:white;
+    background-color: none;
+    color:#75B79E;
     font-family: Roboto;
     font-weight: 700;
     font-size: 40px;
