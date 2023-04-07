@@ -23,12 +23,12 @@ function jogo() {
     Parrots.sort(comparador);
     img.sort(comparador);
     for (let i = 0; i < nCartas; i++) {
-        Cont.innerHTML += `<div class="card" onclick="select(this)">
+        Cont.innerHTML += `<div class="card" onclick="select(this)" data-test="card">
     <div class="front-face face">
-      <img src="imagens/back.png">
+      <img src="imagens/back.png" data-test="face-down-image">
     </div>
     <div class="back-face face">
-      <img src="imagens/fiestaparrot.gif">
+      <img src="imagens/fiestaparrot.gif" data-test="face-up-image">
     </div>
     </div>`;
         let Cartas = document.querySelectorAll(".card");
@@ -95,6 +95,7 @@ function reiniciar(){
         img = [];
         nCartas = prompt("Insira o número de cartas: ");
         jogadas = 0;
+        secs.innerHTML = segundos;
         jogo();
     }
 }
