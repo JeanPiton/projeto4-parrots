@@ -69,8 +69,9 @@ function compara(qtdSelecionada) {
         setTimeout(desvira, 1000);
     }
     if (document.querySelectorAll(".completo").length == nCartas) {
+        //console.log(segundos);
         clearInterval(timer);
-        let msg = function () { alert(`Voce ganhou em ${jogadas} jogadas! A duração do jogo foi de ${segundos} segundos!`); };
+        let msg = function () { alert(`Voce ganhou em ${jogadas} jogadas! A duração do jogo foi de ${secs.innerHTML} segundos!`); };
         setTimeout(msg, 500);
         setTimeout(reiniciar, 500);
     }
